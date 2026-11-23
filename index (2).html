@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Для Василины</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff3f4;
+      font-family: Arial, sans-serif;
+      color: #493b3d;
+    }
+
+    main {
+      max-width: 390px;
+      margin: 60px auto;
+      padding: 25px 20px;
+      background: white;
+      border: 1px solid #f2d9de;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    h1 { font-size: 27px; }
+    p { font-size: 16px; line-height: 1.6; }
+
+    button {
+      padding: 12px 20px;
+      background: #e78297;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #surprise { margin-top: 20px; }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: 12px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 460px) {
+      main { margin: 25px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Для тебя ❤️</h1>
+    <p>Я сделал этот маленький сайт, потому что хотел сказать тебе кое-что.</p>
+
+    <button id="openButton" type="button" onclick="showSurprise()">Нажми сюда</button>
+
+    <section id="surprise" hidden>
+      <p>Василиночка, любимость, не грусти, я тебя очень люблю и всегда буду рядом, солнце</p>
+      <img src="photo1.jpg" alt="Наша первая фотография">
+      <img src="photo2.jpg" alt="Наша вторая фотография">
+    </section>
+  </main>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('surprise').hidden = false;
+      document.getElementById('openButton').hidden = true;
+    }
+  </script>
+</body>
+</html>
